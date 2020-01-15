@@ -3,7 +3,8 @@ import requests
 
 # 2.读取json文件
 url = 'http://pvp.qq.com/web201605/js/herolist.json'
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3947.100 Safari/537.36'}  # 添加用户代理 此处省略，替换成自己的用户代理
+## # 添加用户代理 此处省略，替换成自己的用户代理
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3947.100 Safari/537.36'}
 response = requests.get(url, headers=headers)
 json_list = response.json()
 
