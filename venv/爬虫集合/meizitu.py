@@ -49,6 +49,7 @@ for n in range(1, int(max_page) + 1):
     # 遍历所有MM的标题
     for a in all_a:
         # 提取标题文本，作为文件夹名称
+        #每次爬取延迟，防止服务器拒绝访问
         time.sleep(1)
         title = a.get_text()
         if (title != ''):
