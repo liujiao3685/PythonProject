@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import os
+import time
 
 all_url = 'https://www.mzitu.com'
 
@@ -48,6 +49,7 @@ for n in range(1, int(max_page) + 1):
     # 遍历所有MM的标题
     for a in all_a:
         # 提取标题文本，作为文件夹名称
+        time.sleep(1)
         title = a.get_text()
         if (title != ''):
             print("准备扒取：" + title)
